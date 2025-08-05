@@ -1,0 +1,24 @@
+- type: entity
+  parent: BaseItem
+  id: KamehamehaManual
+  name: kamehameha training manual
+  description: An ancient martial arts manual that teaches the legendary Kamehameha energy wave technique. Use with caution.
+  suffix: 1 use
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    layers:
+    - state: paper
+    - state: cover_base
+      color: "#FF4500"
+      map: [ "cover" ]
+    - state: decor_wingette
+      color: "#FF6500"
+      map: [ "decor" ]
+    - state: icon_text
+      map: [ "icon" ]
+  - type: PsionicLearn
+    abilityComponent: "KamehamehaComponent"
+    doAfterDuration: 10.0
+    deleteAfterUse: true
+    maxUses: 1
