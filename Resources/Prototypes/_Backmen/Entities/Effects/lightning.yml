@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   name: lightning
   id: BaseLightning_Backmen
   abstract: true
@@ -143,3 +143,31 @@
       enabled: false
     - type: Lightning
       canArc: false
+
+- type: entity
+  parent: BaseLightning_Backmen
+  id: KamehamehaBeam
+  save: false
+  name: kamehameha beam
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: /Textures/Effects/lightning.rsi
+      drawdepth: Effects
+      layers:
+        - state: "lightning_1"
+          shader: unshaded
+          color: "#00BFFF"
+    - type: PointLight
+      enabled: true
+      color: "#00BFFF"
+      radius: 4.0
+      softness: 1
+      autoRot: true
+      castShadows: false
+    - type: Electrified
+      enabled: false
+    - type: Lightning
+      canArc: false
+    - type: TimedDespawn
+      lifetime: 2

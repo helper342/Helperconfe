@@ -51,6 +51,7 @@ public sealed partial class MindSwapPowerReturnActionEvent : InstantActionEvent
 }
 public sealed partial class PyrokinesisPowerActionEvent : EntityTargetActionEvent {}
 public sealed partial class PsychokinesisPowerActionEvent : WorldTargetActionEvent {}
+public sealed partial class KamehamehaActionEvent : EntityTargetActionEvent {}
 
 [RegisterComponent, NetworkedComponent]
 public sealed partial class MetapsionicVisibleComponent : Component

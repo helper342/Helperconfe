@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: BaseActionPsi
   abstract: true
   components:
@@ -199,6 +199,21 @@
     - type: TargetAction
       checkCanAccess: false
       range: 30
+
+- type: entity
+  id: ActionKamehameha
+  parent: BaseActionPsi
+  name: action kamehameha
+  components:
+    - type: Action
+      itemIconStyle: BigAction
+      useDelay: 120
+      icon: Backmen/Interface/VerbIcons/kamehameha.png
+    - type: EntityTargetAction
+      event: !type:KamehamehaActionEvent
+    - type: TargetAction
+      checkCanAccess: false
+      range: 8
 
 - type: entity
   id: ActionSpinWeb
